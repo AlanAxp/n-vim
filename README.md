@@ -61,7 +61,7 @@ Para instalar los plugins ejecutar dentro de nvim
 Para hacer uso del autocompletado con COC, hacer:
 
 ```bash
-CoCInstall <nombre>
+:CoCInstall <nombre>
 ```
 
 La información detallada se puede encontrar en [CoC Languge Servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)

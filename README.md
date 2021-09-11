@@ -37,4 +37,22 @@ curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o Plug
 
 ## Ubuntu
 
-TODO: Instalacion y config en ubuntu
+1. Instalar neovim con los siguientes comandos
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
+2. La instalación del los puglins y la creacion de la carpeta de configuración es analoga a lo anterior
+
+## Instalación de los plugins
+
+Plug.vim nos permite acceder a una gran variedad de plugins, los cuales podremos encontrar en [Vim Awesome](https://vimawesome.com/).
+
+Para instalar los plugins ejecutar dentro de nvim 
+
+```bash
+:PlugInstall
+```

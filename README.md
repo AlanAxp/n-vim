@@ -40,12 +40,17 @@ curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -o Plug
 1. Instalar neovim con los siguientes comandos
 
 ```bash
-sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 ```
 
 2. La instalación del los puglins y la creacion de la carpeta de configuración es analoga a lo anterior
+
+Nota: Si este proceso no funciona, recurrir al template encontrado en [Vim Bootstrap](https://vim-bootstrap.com/), y colocar el archivo generado en el folder `.config/nvim` bajo el nombre `init.vim`
+
+```bash
+mv ruta/a/generate.vim ruta/a/.config/nvim
+```
 
 ## Instalación de los plugins
 

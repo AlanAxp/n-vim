@@ -6,24 +6,26 @@ set clipboard=unnamed "Nos permite copiar desde el editor
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set encoding=UTF-8 "Se explica por si solo
 set showmatch "Para que se muestren los parentesis cerrados y abiertos
-set sw=2
+set sw=4
 set relativenumber "El numero relativo de lineas desde la posicion actual
+
+
 call plug#begin('~/.config/nvim/plugged')
 
-"Utilidad 
-Plug 'vim-airline/vim-airline' "barra de estatus  
-Plug 'yggdroot/indentline' "identacion 
+"Utilidad
+Plug 'vim-airline/vim-airline' "barra de estatus
+Plug 'yggdroot/indentline' "identacion
 Plug 'chun-yang/auto-pairs' "autocompletar parentesis
 
 "Navegacion
 Plug 'ryanoasis/vim-devicons' "iconos en nerdtree
 Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
 Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
-Plug 'easymotion/vim-easymotion' "encontrar palabra por dos characters 
+Plug 'easymotion/vim-easymotion' "encontrar palabra por dos characters
 Plug 'yuttie/comfortable-motion.vim' "scroll suave
 
-"themes 
-Plug 'ap/vim-css-color' "color en css 
+"themes
+Plug 'ap/vim-css-color' "color en css
 Plug 'joshdick/onedark.vim' "tema de onedark
 Plug 'rafi/awesome-vim-colorschemes'  "muchos temas
 Plug 'liuchengxu/space-vim-dark'
@@ -43,60 +45,59 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplteado fifi
 
 call plug#end()
 
+
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:completion_motion_scroll_down_key = "j"
-let g:completion_motion_scroll_up_key = "k" 
+let g:completion_motion_scroll_up_key = "k"
 
 set cursorcolumn
 set cursorline
 let g:indentLine_char='▏' "┆ ┊ ┆
 
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 let g:vim_json_syntax_conceal = 0 "comillas en jsons
 
-syntax enable 
+syntax enable
 let g:typescript_indent_disable = 1 "Identar en typescript
 "filetype plugin indent on "Esto se pide para activar la de rust lang
-colorscheme space-vim-dark    "deep-space
-"hi Comment cterm=italic
+" colorscheme space-vim-dark    "deep-space
+hi Comment cterm=underline
 
 "otro esquema de otro tema: dracula
 color space-vim-dark
 set termguicolors
+
 hi LineNr ctermbg=NONE guibg=NONE
+hi Comment guifg=#6D6D6E ctermfg=59
 
-"set background=dark 
-
-
-
-
+"set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"NERDTree config 
+"NERDTree config
 let NERDTreeQuitOnOpen=1 "Para que se cierre una vez que abri un archivo
-let mapleader=" "   
+let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>R :NERDTreeRefreshRoot<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nmap <Leader>w :w<CR> 
+nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 
 "Para crecer hacia la derecha
-nmap <Leader>ng :vertical resize +5<CR>  
+nmap <Leader>ng :vertical resize +5<CR>
 "Para crecer hacia la izquierda
-nmap <Leader>nf :vertical resize -5<CR>  
+nmap <Leader>nf :vertical resize -5<CR>
 "Para que queden del mismo tamano
 nmap <Leader>nb :winc =<CR>
 
 "mover lineas, tambien funciona :m+ :m-2 respectivamente
-nmap <Leader>M :move +1<CR> 
+nmap <Leader>M :move +1<CR>
 nmap <Leader>m :move -2<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -270,5 +271,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-

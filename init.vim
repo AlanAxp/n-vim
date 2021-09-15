@@ -1,12 +1,12 @@
 "Inicio de la configuración
+set numberwidth=1
+set showmatch "Para que se muestren los parentesis cerrados y abiertos
 set number "Numeros a la izq de las lineas
 set mouse=a "Que se permita usar el mouse en vim
-set numberwidth=1
 set clipboard=unnamed "Nos permite copiar desde el editor
-set showcmd "Que se muestren los comandos que el teclean en el cmd
 set encoding=UTF-8 "Se explica por si solo
-set showmatch "Para que se muestren los parentesis cerrados y abiertos
 set sw=4
+set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 
 
@@ -19,10 +19,10 @@ Plug 'chun-yang/auto-pairs' "autocompletar parentesis
 
 "Navegacion
 Plug 'ryanoasis/vim-devicons' "iconos en nerdtree
-Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
-Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
 Plug 'easymotion/vim-easymotion' "encontrar palabra por dos characters
 Plug 'yuttie/comfortable-motion.vim' "scroll suave
+Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
+Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
 
 "themes
 Plug 'ap/vim-css-color' "color en css
@@ -34,8 +34,8 @@ Plug 'liuchengxu/space-vim-dark'
 "Remarcar syntax
 Plug 'evanleck/vim-svelte'  "Extension para svelte
 Plug 'leafgarland/typescript-vim' "Extension de highlighting
-Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
+Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'elzr/vim-json'
 
 
@@ -81,8 +81,8 @@ hi Comment guifg=#6D6D6E ctermfg=59
 let NERDTreeQuitOnOpen=1 "Para que se cierre una vez que abri un archivo
 let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>R :NERDTreeRefreshRoot<CR>
+nmap <Leader>nt :NERDTreeFind<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -95,16 +95,24 @@ nmap <Leader>ng :vertical resize +5<CR>
 nmap <Leader>nf :vertical resize -5<CR>
 "Para que queden del mismo tamano
 nmap <Leader>nb :winc =<CR>
+" Bajar linea sin tener que estar seleccionada, tambien funciona :m+ :m-2 respectivamente
+"nmap <Leader>m :move -2<CR>
 
-"mover lineas, tambien funciona :m+ :m-2 respectivamente
-nmap <Leader>M :move +1<CR>
-nmap <Leader>m :move -2<CR>
+nmap M :move +1<CR>
+" subir una linea sin tener que seleccionarla toda
+nmap m :m-2<CR>
+
+" Subir una linea seleccionada con shift+v
+xnoremap m :m-2<CR>gv=gv
+
+" Bajar una linea seleccionada con shift+v
+xnoremap M :m'>+<CR>gv=gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION SVELTE"""""""""""""""""""""""""""""""""""
-
-let g:svelte_indent_script = 0
 let g:svelte_indent_style = 0
+let g:svelte_indent_script = 0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION DEL COC""""""""""""""""""""""""""""""""""

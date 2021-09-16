@@ -108,6 +108,11 @@ xnoremap m :m-2<CR>gv=gv
 " Bajar una linea seleccionada con shift+v
 xnoremap M :m'>+<CR>gv=gv
 
+" Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
+" Solo activarlo cuando se use en windows
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION SVELTE"""""""""""""""""""""""""""""""""""
 let g:svelte_indent_style = 0
@@ -116,7 +121,6 @@ let g:svelte_indent_script = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION DEL COC""""""""""""""""""""""""""""""""""
-
 
 " TextEdit might fail if hidden is not set.
 set hidden

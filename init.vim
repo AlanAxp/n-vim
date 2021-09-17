@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline' "barra de estatus
 Plug 'yggdroot/indentline' "identacion
 Plug 'chun-yang/auto-pairs' "autocompletar parentesis
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Generar edicion multilinea (Esta siendo testeado)
 
 "Navegacion
 Plug 'ryanoasis/vim-devicons' "iconos en nerdtree

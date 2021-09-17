@@ -39,7 +39,7 @@ Plug 'leafgarland/typescript-vim' "Extension de highlighting
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
 Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'elzr/vim-json'
-Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
+" Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 
 
 "autocomplteado
@@ -47,7 +47,6 @@ Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplteado fifi
 
 call plug#end()
-
 
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:completion_motion_scroll_down_key = "j"
@@ -57,10 +56,16 @@ set cursorcolumn
 set cursorline
 let g:indentLine_char='▏' "┆ ┊ ┆
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""" INDENTACION 4 ESPACIOS"""""""""""""""""""""""""""""""""
+
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:vim_json_syntax_conceal = 0 "comillas en jsons
 
@@ -113,21 +118,25 @@ xnoremap M :m'>+<CR>gv=gv
 
 " Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
 " Solo activarlo cuando se use en windows
-vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""
 
-let g:latex_to_unicode_auto = 1
-let g:latex_to_unicode_tab = 0
-let g:latex_to_unicode_cmd_mapping = ['<C-J>']
+filetype on
+autocmd BufNewFile,BufRead *.jl setlocal ft=julia
+
+" autocmd FileType julia let g:AutoPairsShortcutFastWrap = 0
+" autocmd FileType julia let g:AutoPairsMapCR = 0
+" autocmd FileType julia let g:latex_to_unicode_auto = 1
+" autocmd FileType julia let g:latex_to_unicode_tab = 0
+" autocmd FileType julia let g:latex_to_unicode_cmd_mapping = ['<C-J>']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION SVELTE"""""""""""""""""""""""""""""""""""
 
 let g:svelte_indent_style = 0
 let g:svelte_indent_script = 0
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION DEL COC""""""""""""""""""""""""""""""""""

@@ -39,6 +39,7 @@ Plug 'leafgarland/typescript-vim' "Extension de highlighting
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
 Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'elzr/vim-json'
+Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 
 
 "autocomplteado
@@ -114,9 +115,16 @@ xnoremap M :m'>+<CR>gv=gv
 " Solo activarlo cuando se use en windows
 vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""
+
+let g:latex_to_unicode_auto = 1
+let g:latex_to_unicode_tab = 0
+let g:latex_to_unicode_cmd_mapping = ['<C-J>']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION SVELTE"""""""""""""""""""""""""""""""""""
+
 let g:svelte_indent_style = 0
 let g:svelte_indent_script = 0
 

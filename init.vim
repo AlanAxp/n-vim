@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline' "barra de estatus
 Plug 'yggdroot/indentline' "identacion
 Plug 'chun-yang/auto-pairs' "autocompletar parentesis
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Generar edicion multilinea (Esta siendo testeado)
+Plug 'tpope/vim-surround' " Para poder abrir y cerrar parentesis.
 
 "Navegacion
 Plug 'ryanoasis/vim-devicons' "iconos en nerdtree

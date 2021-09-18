@@ -70,3 +70,16 @@ Para hacer uso del autocompletado con COC, hacer:
 ```
 
 La información detallada se puede encontrar en [CoC Languge Servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+
+
+Language servers instalados
+
+```json
+{
+  "dependencies": {
+    "coc-pyright": ">=1.1.166",
+    "coc-rust-analyzer": ">=0.52.0",
+    "coc-tsserver": ">=1.8.6"
+  }
+}
+```

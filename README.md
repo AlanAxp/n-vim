@@ -79,7 +79,9 @@ Language servers instalados
   "dependencies": {
     "coc-pyright": ">=1.1.166",
     "coc-rust-analyzer": ">=0.52.0",
+    "coc-svelte": ">=0.4.0",
     "coc-tsserver": ">=1.8.6"
   }
 }
+
 ```

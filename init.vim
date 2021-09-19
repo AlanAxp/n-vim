@@ -6,7 +6,6 @@ set number "Numeros a la izq de las lineas
 set mouse=a "Que se permita usar el mouse en vim
 set clipboard=unnamed "Nos permite copiar desde el editor
 set encoding=UTF-8 "Se explica por si solo
-set sw=4
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 

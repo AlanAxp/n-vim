@@ -6,6 +6,7 @@ set number "Numeros a la izq de las lineas
 set mouse=a "Que se permita usar el mouse en vim
 set clipboard=unnamed "Nos permite copiar desde el editor
 set encoding=UTF-8 "Se explica por si solo
+set sw=4
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 
@@ -25,6 +26,10 @@ Plug 'easymotion/vim-easymotion' "encontrar palabra por dos characters
 Plug 'yuttie/comfortable-motion.vim' "scroll suave
 Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
 Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
+
+" Navegacion de archivos
+" Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 "themes
 Plug 'ap/vim-css-color' "color en css
@@ -93,8 +98,10 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>R :NERDTreeRefreshRoot<CR>
 nmap <Leader>nt :NERDTreeFind<CR>
 
+let NERDTreeShowHidden=1 " Mostrar archivos ocultos
+
 let g:NERDTreeDirArrowExpandable = '▶'  " '▸'
-let g:NERDTreeDirArrowCollapsible =  '▼'   " '▾'
+let g:NERDTreeDirArrowCollapsible =  '▼'   " '▾' 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -213,6 +220,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
+
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()

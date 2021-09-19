@@ -10,6 +10,7 @@ set sw=4
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 
+
 call plug#begin('~/.config/nvim/plugged')
 
 "Utilidad
@@ -30,7 +31,8 @@ Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
 Plug 'ap/vim-css-color' "color en css
 Plug 'joshdick/onedark.vim' "tema de onedark
 Plug 'rafi/awesome-vim-colorschemes'  "muchos temas
-Plug 'liuchengxu/space-vim-dark' " TEMA ACTUAL
+Plug 'liuchengxu/space-vim-dark'
+
 
 "Remarcar syntax
 Plug 'evanleck/vim-svelte'  "Extension para svelte
@@ -40,12 +42,12 @@ Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'elzr/vim-json'
 Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 
+
 "autocomplteado
 "Plug 'ervandew/supertab' "Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplteado fifi
 
 call plug#end()
-
 
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:completion_motion_scroll_down_key = "j"
@@ -55,18 +57,21 @@ set cursorcolumn
 set cursorline
 let g:indentLine_char='▏' "┆ ┊ ┆
 
-" Configutacion de tabulado
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""" INDENTACION 4 ESPACIOS"""""""""""""""""""""""""""""""""
+
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-"comillas en jsons
-let g:vim_json_syntax_conceal = 0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:vim_json_syntax_conceal = 0 "comillas en jsons
 
 syntax enable
 let g:typescript_indent_disable = 1 "Identar en typescript
-
 "filetype plugin indent on "Esto se pide para activar la de rust lang
 " colorscheme space-vim-dark    "deep-space
 hi Comment cterm=underline
@@ -81,13 +86,16 @@ hi Comment guifg=#6D6D6E ctermfg=59
 "set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""" NERDTree config """""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" NERDTree config""""""""""""""""""""""""""""""""""""""
 
 let NERDTreeQuitOnOpen=1 "Para que se cierre una vez que abri un archivo
 let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>R :NERDTreeRefreshRoot<CR>
 nmap <Leader>nt :NERDTreeFind<CR>
+
+let g:NERDTreeDirArrowExpandable = '▶'  " '▸'
+let g:NERDTreeDirArrowCollapsible =  '▼'   " '▾'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -103,9 +111,8 @@ nmap <Leader>nb :winc =<CR>
 " Bajar linea sin tener que estar seleccionada, tambien funciona :m+ :m-2 respectivamente
 "nmap <Leader>m :move -2<CR>
 
-" subir una linea sin tener que seleccionarla toda
 nmap M :move +1<CR>
-
+" subir una linea sin tener que seleccionarla toda
 nmap m :m-2<CR>
 
 " Subir una linea seleccionada con shift+v
@@ -116,14 +123,13 @@ xnoremap M :m'>+<CR>gv=gv
 
 " Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
 " Solo activarlo cuando se use en windows
-" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""
 
 filetype on
 autocmd BufNewFile,BufRead *.jl setlocal ft=julia
-
 autocmd FileType julia let g:latex_to_unicode_tab = 0
 
 """"Los comentados de momento parecen ser no necesarios
@@ -136,8 +142,10 @@ autocmd FileType julia let g:latex_to_unicode_tab = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION SVELTE"""""""""""""""""""""""""""""""""""
 
-let g:svelte_indent_style = 0
-let g:svelte_indent_script = 0
+let g:svelte_indent_style = 1
+let g:svelte_indent_script = 1
+let g:svelte_preprocessors = ['typescript']
+let g:vim_svelte_plugin_use_typescript = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION DEL COC""""""""""""""""""""""""""""""""""

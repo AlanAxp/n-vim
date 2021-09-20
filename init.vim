@@ -71,13 +71,19 @@ set softtabstop=4
 set shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" JSON Indentacion"""""""""""""""""""""""""""""""""""""
 
 let g:vim_json_syntax_conceal = 0 "comillas en jsons
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
 let g:typescript_indent_disable = 1 "Identar en typescript
 "filetype plugin indent on "Esto se pide para activar la de rust lang
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" COLORSCHEMA y TEMA"""""""""""""""""""""""""""""""""""
+
 " colorscheme space-vim-dark    "deep-space
 hi Comment cterm=underline
 
@@ -91,7 +97,7 @@ hi Comment guifg=#6D6D6E ctermfg=59
 "set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""" Mejor indentacion"""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""
 
 " Para poder identar presionando, en modo de bloque visual y con mayor o menor
 vnoremap < <gv
@@ -99,6 +105,9 @@ vnoremap > >gv
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" FZF config"""""""""""""""""""""""""""""""""""""""""""
+
+" Para hacer uso de ripgreb Rg, se necesita instalar
+" sudo apt-get install ripgrep
 
 nmap <Leader>fs :FZF<CR>
 nmap <Leader>gt :Rg<CR>

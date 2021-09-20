@@ -1,5 +1,6 @@
 """"""""""""""""" Inicio de la configuración """"""""""""""""""""""""
 
+let mapleader=" "
 set numberwidth=1
 set showmatch "Para que se muestren los parentesis cerrados y abiertos
 set number "Numeros a la izq de las lineas
@@ -28,8 +29,8 @@ Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
 Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
 
 " Navegacion de archivos
-" Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 "themes
 Plug 'ap/vim-css-color' "color en css
@@ -90,10 +91,22 @@ hi Comment guifg=#6D6D6E ctermfg=59
 "set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" Mejor indentacion"""""""""""""""""""""""""""""""""""
+
+" Para poder identar presionando, en modo de bloque visual y con mayor o menor
+vnoremap < <gv
+vnoremap > >gv
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" FZF config"""""""""""""""""""""""""""""""""""""""""""
+
+nmap <Leader>fs :FZF<CR>
+nmap <Leader>gt :Rg<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" NERDTree config""""""""""""""""""""""""""""""""""""""
 
 let NERDTreeQuitOnOpen=1 "Para que se cierre una vez que abri un archivo
-let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>R :NERDTreeRefreshRoot<CR>
 nmap <Leader>nt :NERDTreeFind<CR>

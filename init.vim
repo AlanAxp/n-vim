@@ -45,7 +45,8 @@ Plug 'leafgarland/typescript-vim' "Extension de highlighting
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
 Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
 Plug 'elzr/vim-json' " Remarcado de Jsons
-Plug 'elzr/vim-json' " Remarcado para archivos toml
+Plug 'cespare/vim-toml' " Remarcado para archivos toml
+Plug 'tpope/vim-markdown' " Remarcado para archivos markdown
 Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 
 
@@ -164,7 +165,7 @@ xnoremap M :m'>+<CR>gv=gv
 
 " Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
 " Solo activarlo cuando se use en windows
-vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""

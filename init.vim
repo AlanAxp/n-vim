@@ -71,9 +71,21 @@ set softtabstop=4
 set shiftwidth=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""" JSON Indentacion"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""" JSON config""""""""""""""""""""""""""""""""""""""""""
 
 let g:vim_json_syntax_conceal = 0 "comillas en jsons
+filetype on
+autocmd BufNewFile,BufRead *.json set filetype=json
+autocmd FileType json let g:latex_to_unicode_tab = 0
+
+augroup json_autocmd
+  autocmd!
+  autocmd FileType json set autoindent
+  autocmd FileType json set formatoptions=tcq2l
+  autocmd FileType json set textwidth=78 shiftwidth=4
+  autocmd FileType json set softtabstop=4 tabstop=4
+  autocmd FileType json set expandtab
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -123,7 +135,7 @@ nmap <Leader>nt :NERDTreeFind<CR>
 let NERDTreeShowHidden=1 " Mostrar archivos ocultos
 
 let g:NERDTreeDirArrowExpandable = '▶'  " '▸'
-let g:NERDTreeDirArrowCollapsible =  '▼'   " '▾' 
+let g:NERDTreeDirArrowCollapsible =  '▼'   " '▾'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -208,9 +220,9 @@ endif
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort

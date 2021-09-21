@@ -44,7 +44,8 @@ Plug 'evanleck/vim-svelte'  "Extension para svelte
 Plug 'leafgarland/typescript-vim' "Extension de highlighting
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
 Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json' " Remarcado de Jsons
+Plug 'elzr/vim-json' " Remarcado para archivos toml
 Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 
 
@@ -186,6 +187,13 @@ let g:svelte_indent_style = 1
 let g:svelte_indent_script = 1
 let g:svelte_preprocessors = ['typescript']
 let g:vim_svelte_plugin_use_typescript = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""" CONFIGURACION MARKDOWN"""""""""""""""""""""""""""""""""
+
+let g:markdown_fenced_languages = ['python', 'bash=sh', 'rust', 'toml']
+let g:markdown_syntax_conceal = 0
+let g:markdown_minlines = 100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION DEL COC""""""""""""""""""""""""""""""""""

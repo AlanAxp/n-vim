@@ -38,6 +38,8 @@ Plug 'joshdick/onedark.vim' "tema de onedark
 Plug 'rafi/awesome-vim-colorschemes'  "muchos temas
 Plug 'liuchengxu/space-vim-dark'
 
+Plug 'ghifarit53/tokyonight-vim'
+
 
 "Remarcar syntax
 Plug 'evanleck/vim-svelte'  "Extension para svelte
@@ -97,18 +99,23 @@ let g:typescript_indent_disable = 1 "Identar en typescript
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" COLORSCHEMA y TEMA"""""""""""""""""""""""""""""""""""
-
-" colorscheme space-vim-dark    "deep-space
+set termguicolors
+hi Comment guifg=#6D6D6E ctermfg=59
 hi Comment cterm=underline
 
+" colorscheme space-vim-dark    "deep-space
 "otro esquema de otro tema: dracula
-color space-vim-dark
-set termguicolors
-
-hi LineNr ctermbg=NONE guibg=NONE
-hi Comment guifg=#6D6D6E ctermfg=59
-
 "set background=dark
+
+"color space-vim-dark
+"hi LineNr ctermbg=NONE guibg=NONE
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""
@@ -165,7 +172,7 @@ xnoremap M :m'>+<CR>gv=gv
 
 " Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
 " Solo activarlo cuando se use en windows
-" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""

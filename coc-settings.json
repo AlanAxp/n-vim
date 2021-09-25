@@ -1,13 +1,6 @@
 {
-  "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.inlayHints.enable": true,
   "diagnostic.checkCurrentLine": true,
-  
-  
-  #InMac
-  "coc.preferences.useQuickfixForLocations": true,
-  "coc.preferences.snippets.enable": true,
-  "coc.preferences.extensionUpdateCheck": "never",
-  "suggest.disableMenu": true,
-  "suggest.snippetIndicator": ""
+  "svelte.enable-ts-plugin": true
 }
 

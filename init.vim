@@ -115,7 +115,6 @@ let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
-hi Comment guifg=#5c6280 ctermfg=59 "#6D6D6E
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""

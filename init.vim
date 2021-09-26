@@ -100,11 +100,10 @@ let g:typescript_indent_disable = 1 "Identar en typescript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" COLORSCHEMA y TEMA"""""""""""""""""""""""""""""""""""
 set termguicolors
-hi Comment guifg=#6D6D6E ctermfg=59
 hi Comment cterm=underline
 
-" colorscheme space-vim-dark    "deep-space
-"otro esquema de otro tema: dracula
+"colorscheme space-vim-dark    "deep-space
+    "otro esquema de otro tema: dracula
 "set background=dark
 
 "color space-vim-dark
@@ -116,6 +115,7 @@ let g:tokyonight_style = 'storm' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
+hi Comment guifg=#5c6280 ctermfg=59 "#6D6D6E
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""

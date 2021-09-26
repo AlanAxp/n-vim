@@ -1,4 +1,4 @@
-""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
+""""""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
 
 let mapleader=" "
 set numberwidth=1
@@ -25,7 +25,7 @@ Plug 'tpope/vim-surround' " Para poder abrir y cerrar parentesis.
 Plug 'ryanoasis/vim-devicons' "iconos en nerdtree
 Plug 'easymotion/vim-easymotion' "encontrar palabra por dos characters
 Plug 'yuttie/comfortable-motion.vim' "scroll suave
-Plug 'scrooloose/nerdtree' "Para ver el arbol de la izq de archivos
+Plug 'scrooloose/nerdtree' "Para iver el arbol de la izq de archivos
 Plug 'christoomey/vim-tmux-navigator' "Para navegar entre las ventanas
 
 " Navegacion de archivos
@@ -100,21 +100,20 @@ let g:typescript_indent_disable = 1 "Identar en typescript
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" COLORSCHEMA y TEMA"""""""""""""""""""""""""""""""""""
 set termguicolors
-hi Comment cterm=underline
 
-"colorscheme space-vim-dark    "deep-space
-    "otro esquema de otro tema: dracula
-"set background=dark
+""""""""CONFIGURACION space vim dark theme """""""""""""""""""""""""""""""""""""
 
-"color space-vim-dark
-"hi LineNr ctermbg=NONE guibg=NONE
+colorscheme space-vim-dark    
+color space-vim-dark
+hi LineNr ctermbg=NONE guibg=NONE
 
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""CONFIGURACION tokyonight theme """""""""""""""""""""""""""""""""""""
 
-let g:tokyonight_style = 'storm' " available: night, storm
-let g:tokyonight_enable_italic = 1
-
-colorscheme tokyonight
+"let g:tokyonight_style = 'storm' " available: night, storm
+"let g:tokyonight_enable_italic = 1
+"colorscheme tokyonight
+"
+"hi Comment guifg=#505A87 ctermfg=59 "#575757 #6D6D6E
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""

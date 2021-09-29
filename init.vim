@@ -1,4 +1,4 @@
-""""""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
+""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
 
 let mapleader=" "
 set numberwidth=1
@@ -37,7 +37,6 @@ Plug 'ap/vim-css-color' "color en css
 Plug 'joshdick/onedark.vim' "tema de onedark
 Plug 'rafi/awesome-vim-colorschemes'  "muchos temas
 Plug 'liuchengxu/space-vim-dark'
-
 Plug 'ghifarit53/tokyonight-vim'
 
 
@@ -50,7 +49,6 @@ Plug 'elzr/vim-json' " Remarcado de Jsons
 Plug 'cespare/vim-toml' " Remarcado para archivos toml
 Plug 'tpope/vim-markdown' " Remarcado para archivos markdown
 Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
-
 
 "autocomplteado
 "Plug 'ervandew/supertab' "Autocompletado
@@ -90,6 +88,10 @@ augroup json_autocmd
   autocmd FileType json set softtabstop=4 tabstop=4
   autocmd FileType json set expandtab
 augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Evitar problemas con sql scripts
+let g:omni_sql_default_compl_type = 'syntax'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

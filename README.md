@@ -119,7 +119,6 @@ Language servers instalados
     "coc-rust-analyzer": ">=0.52.0",
     "coc-svelte": ">=0.4.0",
     "coc-tsserver": ">=1.8.6"
-
   }
 }
 

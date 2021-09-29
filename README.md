@@ -52,7 +52,25 @@ Nota: Si este proceso no funciona, recurrir al template encontrado en [Vim Boots
 mv ruta/a/generate.vim ruta/a/.config/nvim
 ```
 
-## Instalación de los plugins
+## Windows
+
+La instalación en windows es tan sencilla como lo seria en los ya mencionados... casi.
+
+1. Instarlar chocolatey (un gestor de paquetes como lo es brew para mac)
+
+    [link instalar chocolatey](https://chocolatey.org/install)
+    
+2. Instalar neovim como viene por defecto en la libreria
+
+    ```bash
+    choco install neovim // Revisar esto
+    ```
+    
+
+
+
+
+# Instalación de los plugins
 
 Plug.vim nos permite acceder a una gran variedad de plugins, los cuales podremos encontrar en [Vim Awesome](https://vimawesome.com/).
 

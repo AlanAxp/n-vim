@@ -76,6 +76,8 @@ La instalación en windows es tan sencilla como lo seria en los ya mencionados..
 4. Al descargar neovim, este se instala en `C:\User\Usuario\AppData\local\nvim-data\site\`, el cual debemos modificar para que quede con la misma estructura de arbol como en ubuntu/mac, es decir...
 
     4.1 Substituir el nombre `nvim-data` por `nvim`
+
+
     4.2 Eliminar folder `site` y poner sus directorios en `nvim`, tal que sea
 
         `nvim\autoload`

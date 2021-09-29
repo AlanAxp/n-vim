@@ -77,10 +77,12 @@ Language servers instalados
 ```json
 {
   "dependencies": {
+    "coc-html": ">=1.4.1",
     "coc-pyright": ">=1.1.166",
     "coc-rust-analyzer": ">=0.52.0",
     "coc-svelte": ">=0.4.0",
     "coc-tsserver": ">=1.8.6"
+
   }
 }
 

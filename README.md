@@ -60,14 +60,33 @@ La instalación en windows es tan sencilla como lo seria en los ya mencionados..
 
     [link instalar chocolatey](https://chocolatey.org/install)
     
-2. Instalar neovim como viene por defecto en la libreria
+2. Instalar neovim como viene en la [pagina oficial](https://community.chocolatey.org/packages/neovim/0.5.0) 
 
     ```bash
-    choco install neovim // Revisar esto
+    choco install neovim
     ```
     
+3. Instalar vim Plug con el comando que se optiene de la [pagina oficial](https://github.com/junegunn/vim-plug)
 
+    ```cmd
+    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+    ```
+    
+4. Al descargar neovim, este se instala en `C:\User\Usuario\AppData\local\nvim-data\site\`, el cual debemos modificar para que quede con la misma estructura de arbol como en ubuntu/mac, es decir...
 
+    4.1 Substituir el nombre `nvim-data` por `nvim`
+    4.2 Eliminar folder `site` y poner sus directorios en `nvim`, tal que sea
+
+        `nvim\autoload`
+        `nvim\`
+        TODO: Continuar con esto cuando tengo la compu con windows`
+
+5. Arrglar la ruta del vim init para que pueda leer el sistema de archivos de windows 
+
+    `TODO: Agregar la ruta`
+
+6. Disfrutar
 
 
 # Instalación de los plugins

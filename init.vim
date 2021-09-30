@@ -1,4 +1,4 @@
-""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
+"""""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
 
 let mapleader=" "
 set numberwidth=1
@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline' "barra de estatus
 Plug 'yggdroot/indentline' "identacion
 Plug 'chun-yang/auto-pairs' "autocompletar parentesis
-Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Generar edicion multilinea (Esta siendo testeado)
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Generar la multilinea
 Plug 'tpope/vim-surround' " Para poder abrir y cerrar parentesis.
 
 "Navegacion
@@ -53,6 +53,7 @@ Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 "autocomplteado
 "Plug 'ervandew/supertab' "Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplteado fifi
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -93,6 +94,16 @@ augroup END
 " Evitar problemas con sql scripts
 let g:omni_sql_default_compl_type = 'syntax'
 
+
+""""""""""""""""""" EMMET CONFIGURATION (HTML) """"""""""""""""""""""""""""""
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+let g:user_emmet_mode='n' " Emmet solo funcionara en normal mode, para evitar
+                            " problemas con las comas
+let g:user_emmet_leader_key=',' " El atajo para activarl el emmet sera ','
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
@@ -114,7 +125,7 @@ hi LineNr ctermbg=NONE guibg=NONE
 "let g:tokyonight_style = 'storm' " available: night, storm
 "let g:tokyonight_enable_italic = 1
 "colorscheme tokyonight
-"
+
 "hi Comment guifg=#505A87 ctermfg=59 "#575757 #6D6D6E
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

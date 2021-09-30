@@ -1,4 +1,4 @@
-"""""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
+""""""""""""""""" Inicio de la configuración """"""""""""""""""""""""
 
 let mapleader=" "
 set numberwidth=1
@@ -65,6 +65,10 @@ set cursorcolumn
 set cursorline
 let g:indentLine_char='▏' "┆ ┊ ┆
 
+"""""""""""""""""""""""""""""""""" Remapeando ESC """""""""""""""""""""""""""""
+
+inoremap jF <Esc>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" INDENTACION 4 ESPACIOS"""""""""""""""""""""""""""""""""
 
@@ -116,7 +120,7 @@ set termguicolors
 
 """"""""CONFIGURACION space vim dark theme """""""""""""""""""""""""""""""""""""
 
-colorscheme space-vim-dark    
+colorscheme space-vim-dark
 color space-vim-dark
 hi LineNr ctermbg=NONE guibg=NONE
 

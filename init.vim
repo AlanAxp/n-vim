@@ -7,7 +7,7 @@ set number "Numeros a la izq de las lineas
 set mouse=a "Que se permita usar el mouse en vim
 set clipboard=unnamed "Nos permite copiar desde el editor
 set encoding=UTF-8 "Se explica por si solo
-set sw=4
+set sw=4 
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 
@@ -102,16 +102,6 @@ augroup END
 " Evitar problemas con sql scripts
 let g:omni_sql_default_compl_type = 'syntax'
 
-
-""""""""""""""""""" EMMET CONFIGURATION (HTML) """"""""""""""""""""""""""""""
-
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-let g:user_emmet_mode='n' " Emmet solo funcionara en normal mode, para evitar
-                            " problemas con las comas
-let g:user_emmet_leader_key=',' " El atajo para activarl el emmet sera ','
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax enable
@@ -120,11 +110,13 @@ let g:typescript_indent_disable = 1 "Identar en typescript
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" COLORSCHEMA y TEMA"""""""""""""""""""""""""""""""""""
+
+set guifont=normal
 set termguicolors
 
 """"""""CONFIGURACION space vim dark theme """""""""""""""""""""""""""""""""""""
 
-colorscheme space-vim-dark
+colorscheme space-vim-dark    
 color space-vim-dark
 hi LineNr ctermbg=NONE guibg=NONE
 
@@ -214,6 +206,20 @@ let g:svelte_indent_style = 1
 let g:svelte_indent_script = 1
 let g:svelte_preprocessors = ['typescript']
 let g:vim_svelte_plugin_use_typescript = 1
+
+
+autocmd BufNewFile,BufRead *.svelte set filetype=svelte
+
+
+""""""""""""""""""" EMMET CONFIGURATION (HTML) """"""""""""""""""""""""""""""
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,svelte EmmetInstall
+
+let g:user_emmet_mode='n' " Emmet solo funcionara en normal mode, para evitar
+                            " problemas con las comas
+let g:user_emmet_leader_key=',' " El atajo para activarl el emmet sera ','
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION MARKDOWN"""""""""""""""""""""""""""""""""

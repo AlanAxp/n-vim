@@ -54,6 +54,7 @@ Plug 'JuliaEditorSupport/julia-vim' " Extension para usar julia
 "Plug 'ervandew/supertab' "Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocomplteado fifi
 Plug 'mattn/emmet-vim'
+Plug 'tomtom/tcomment_vim'
 
 " Uso con GIT
 Plug 'tpope/vim-fugitive'

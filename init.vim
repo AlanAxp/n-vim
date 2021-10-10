@@ -39,7 +39,6 @@ Plug 'rafi/awesome-vim-colorschemes'  "muchos temas
 Plug 'liuchengxu/space-vim-dark'
 Plug 'ghifarit53/tokyonight-vim'
 
-
 "Remarcar syntax
 Plug 'evanleck/vim-svelte'  "Extension para svelte
 Plug 'leafgarland/typescript-vim' "Extension de highlighting
@@ -115,19 +114,22 @@ let g:typescript_indent_disable = 1 "Identar en typescript
 set guifont=normal
 set termguicolors
 
+""""""""CONFIGURACION onedark """""""""""""""""""""""""""""""""""""
+
+colorscheme onedark
+
 """"""""CONFIGURACION space vim dark theme """""""""""""""""""""""""""""""""""""
 
-colorscheme space-vim-dark    
-color space-vim-dark
-hi LineNr ctermbg=NONE guibg=NONE
+" colorscheme space-vim-dark    
+" color space-vim-dark
+" hi LineNr ctermbg=NONE guibg=NONE
 
 """"""""CONFIGURACION tokyonight theme """""""""""""""""""""""""""""""""""""
 
-"let g:tokyonight_style = 'storm' " available: night, storm
-"let g:tokyonight_enable_italic = 1
-"colorscheme tokyonight
-
-"hi Comment guifg=#505A87 ctermfg=59 "#575757 #6D6D6E
+" let g:tokyonight_style = 'storm' " available: night, storm
+" let g:tokyonight_enable_italic = 1
+" colorscheme tokyonight
+" hi Comment guifg=#508087 ctermfg=59 "#575757 #6D6D6E
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""" Mejor indentacion""""""""""""""""""""""""""""""""""""
@@ -221,6 +223,7 @@ let g:user_emmet_mode='n' " Emmet solo funcionara en normal mode, para evitar
                             " problemas con las comas
 let g:user_emmet_leader_key=',' " El atajo para activarl el emmet sera ','
 
+" let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.config/nvim/snippets_custom.json')), "\n"))
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" CONFIGURACION MARKDOWN"""""""""""""""""""""""""""""""""

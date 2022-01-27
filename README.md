@@ -13,9 +13,9 @@ brew install neovim
 2. Crear los folders
 
 ```bash
-mkdir ./config/nvim/
-mkdir ./config/nvim/autoload
-mkdir ./config/nvim/autoload/plugged
+mkdir /.config/nvim/
+mkdir /.config/nvim/autoload
+mkdir /.config/nvim/autoload/plugged
 ```
 
 3. Colocar el archivo `Plug.vim` dentro de tal que su ruta sea

@@ -48,6 +48,12 @@ sudo apt-get install neovim
 
 Nota: Si este proceso no funciona, recurrir al template encontrado en [Vim Bootstrap](https://vim-bootstrap.com/), y colocar el archivo generado en el folder `.config/nvim` bajo el nombre `init.vim`
 
+NOTA: En wsl/ubutu necesitamos revisar que vim plugin este en minisculas
+
+```
+plug.vim
+```
+
 ```bash
 mv ruta/a/generate.vim ruta/a/.config/nvim
 ```

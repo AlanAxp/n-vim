@@ -7,7 +7,7 @@ set number "Numeros a la izq de las lineas
 set mouse=a "Que se permita usar el mouse en vim
 set clipboard=unnamed "Nos permite copiar desde el editor
 set encoding=UTF-8 "Se explica por si solo
-set sw=4 
+set sw=4
 set showcmd "Que se muestren los comandos que el teclean en el cmd
 set relativenumber "El numero relativo de lineas desde la posicion actual
 
@@ -40,7 +40,13 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'ghifarit53/tokyonight-vim'
 
 "Remarcar syntax
+"Plug 'prettier/vim-prettier', { 'do': 'npx yarn install' } " Extension para hacer formateo bonito de codigo
+"Plug 'prettier/vim-prettier', { 'do': 'npx yarn install --frozen-lockfile --production' }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npx yarn install',
+  \ 'for': ['rust', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 Plug 'evanleck/vim-svelte'  "Extension para svelte
+Plug 'airblade/vim-gitgutter' " Extension para ver visualmente los cambios de git
 Plug 'leafgarland/typescript-vim' "Extension de highlighting
 Plug 'pangloss/vim-javascript' "Extencion para usar javascript
 Plug 'rust-lang/rust.vim' "Extension para usar Rust mas cool
@@ -73,6 +79,9 @@ let g:indentLine_char='▏' "┆ ┊ ┆
 
 inoremap jF <Esc>
 
+"prettier
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" INDENTACION 4 ESPACIOS"""""""""""""""""""""""""""""""""
 
@@ -120,7 +129,7 @@ colorscheme onedark
 
 """"""""CONFIGURACION space vim dark theme """""""""""""""""""""""""""""""""""""
 
-" colorscheme space-vim-dark    
+" colorscheme space-vim-dark
 " color space-vim-dark
 " hi LineNr ctermbg=NONE guibg=NONE
 
@@ -186,7 +195,7 @@ xnoremap M :m'>+<CR>gv=gv
 
 " Soporte para el uso de copy en WSL (se ve horrible  cuando se copia al clipboard)
 " Solo activarlo cuando se use en windows
-vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""" COMPATIBILIDAD CON JULIA"""""""""""""""""""""""""""""""
